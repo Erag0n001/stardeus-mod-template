@@ -14,19 +14,18 @@ For simple C# mods you can always use `KL.Utils.D.Err("LOG SOMETHING")` to debug
 
 1. Download this template and copy it into `Stardeus_Data/StreamingAssets/Mods/` and rename it to whatever name you'd like.
 2. Go inside of your mod's folder and look for `modinfo.json`. Change the field "Id" to something unique. For example `"Spajus.MyMod"`.
-2.1 You may need to setup manual references to the game's source code, see step 5 on how to access the game files. Look for a Managed folder, which should be full of .dll files. Import them, and make sure Copy Local is not ticked in their options.
-3. Ensure your project builds. You can create a new project using Rider and import all of the .cs source files.
-4. Download [DoorStop](https://github.com/NeighTools/UnityDoorstop), which allows setting up a debugger.
-5. Extract the content of the 64bit version in Stardeus' folder. If you've bought the game through Steam, you can right click on Stardeus => Manage => Browse Local Files.
-6. If you're on Windows, open `doorstop_config.ini` with any text editor. On Linux, open `run.sh`.
-6.1 On Linux, look for `executable_name` and set it to "Stardeus"
-7. Set `debug_enabled` to `true` (`1` on Linux)
-8. Note down the `debug_adress`, you will need it later.
-9. Open the game normally.
-9.1 On Linux, open the game through the shell script `sh run.sh`.
-10. Go into Rider, go click on the 4 horizontal bars in the top left => `Run` => `Edit Configurations`
-11. Create a new `Mono Remote` configuration by clicking on the +.
-12. Set your `Host` to `127.0.0.1` and the `Port` to what you wrote down earlier at step 8.
-13. Press OK. You should now have a new button next to the run button at the top of the interface.
-14. Press it, and the debugger should attach.
-15. You should be able to set breakpoints in your project. You can also set breakpoints in the decompiled code Rider provides when inspecting game classes.
+3. You may need to setup manual references to the game's source code, see step 5 on how to access the game files. Look for a Managed folder, which should be full of .dll files. Import them, and make sure Copy Local is not ticked in their options.
+4. Ensure your project builds. You can create a new project using Rider and import all of the .cs source files.
+5. Download [DoorStop](https://github.com/NeighTools/UnityDoorstop), which allows setting up a debugger.
+6. Extract the content of the 64bit version in Stardeus' folder. If you've bought the game through Steam, you can right click on Stardeus => Manage => Browse Local Files.
+7. If you're on Windows, open `doorstop_config.ini` with any text editor. On Linux, open `run.sh`.
+8. On Linux, look for `executable_name` and set it to "Stardeus"
+9. Set `debug_enabled` to `true` (`1` on Linux)
+10. Note down the `debug_adress`, you will need it later.
+11. Open the game normally. On Linux, open the game through the shell script `sh run.sh`
+12. Go into Rider, go click on the 4 horizontal bars in the top left => `Run` => `Edit Configurations`
+13. Create a new `Mono Remote` configuration by clicking on the +.
+14. Set your `Host` to `127.0.0.1` and the `Port` to what you wrote down earlier at step 8.
+15. Press OK. You should now have a new button next to the run button at the top of the interface.
+16. Press it, and the debugger should attach.
+17. You should be able to set breakpoints in your project. You can also set breakpoints in the decompiled code Rider provides when inspecting game classes.
